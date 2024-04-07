@@ -31,7 +31,12 @@ export class GestoreFormService implements OnDestroy{
 
   //adi// Validazione custom per l'email
   private validatoreEmail(): ValidatorFn {
-    return Validators.pattern(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/);
+    return Validators.compose([
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(50),
+      Validators.pattern(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/)
+    ]) as ValidatorFn;
   }
 
   //adi// Validazione custom per la password

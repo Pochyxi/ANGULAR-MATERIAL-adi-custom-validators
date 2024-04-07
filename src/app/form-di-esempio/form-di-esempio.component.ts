@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GestoreFormService} from "../gestore-form.service";
-import {FormGroup} from "@angular/forms";
+import {FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-form-di-esempio',
@@ -25,4 +25,5 @@ export class FormDiEsempioComponent implements OnInit{
   }
 
 
+  protected readonly Validators = Validators;
 }

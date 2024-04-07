@@ -4,7 +4,11 @@
   }">
     <mat-form-field>
       <mat-label>Email</mat-label>
-      <input matInput placeholder="Email" formControlName="email">
+      <input
+        matInput
+        placeholder="Email"
+        formControlName="email"
+      >
 
       <app-messaggio-validazione [controllo]="login.get('email')" [nomeControllo]="'email'"></app-messaggio-validazione>
     </mat-form-field>
