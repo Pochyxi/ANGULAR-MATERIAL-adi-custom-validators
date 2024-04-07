@@ -16,3 +16,7 @@ export const ArchivioForms = {
 
 
 }
+
+export enum ArchivioFormsEnum {
+  login = 'login'
+}

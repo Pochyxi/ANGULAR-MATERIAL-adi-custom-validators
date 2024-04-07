@@ -1,7 +1,7 @@
 import {Injectable, OnDestroy} from '@angular/core';
 import {FormBuilder, FormGroup, ValidatorFn, Validators} from "@angular/forms";
 import {BehaviorSubject, Subscription} from "rxjs";
-import {ArchivioForms} from "./util/ArchivioForms";
+import {ArchivioForms, ArchivioFormsEnum} from "./util/ArchivioForms";
 
 interface ValidatoriCampiForm {
   [field: string]: (string | { name: string; args: any })[];
@@ -118,7 +118,7 @@ export class GestoreFormService implements OnDestroy{
   }
 
   //adi// Metodo per inizializzare un form
-  public inizializzaFormConValidazioni(nomeForm: string): FormGroup {
+  public inizializzaFormConValidazioni(nomeForm: ArchivioFormsEnum): FormGroup {
     const validatoriForm = this.riceviValidatoriDelForm(nomeForm);
     const gruppo: { [key: string]: any } = {};
 

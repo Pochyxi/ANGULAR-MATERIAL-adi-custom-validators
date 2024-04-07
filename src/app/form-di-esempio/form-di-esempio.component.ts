@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {GestoreFormService} from "../gestore-form.service";
-import {FormGroup, Validators} from "@angular/forms";
+import {FormGroup} from "@angular/forms";
+import {ArchivioFormsEnum} from "../util/ArchivioForms";
 
 @Component({
   selector: 'app-form-di-esempio',
@@ -16,14 +17,11 @@ export class FormDiEsempioComponent implements OnInit{
   constructor(private gestoreForm$: GestoreFormService) {
     //adi// Inizializzazione dinamica tramite gestoreForm$
     //adi// Configurazione del form: ArchivioForms.login
-    this.login = this.gestoreForm$.inizializzaFormConValidazioni('login');
+    this.login = this.gestoreForm$.inizializzaFormConValidazioni(ArchivioFormsEnum.login);
   }
 
 
   ngOnInit() {
 
   }
-
-
-  protected readonly Validators = Validators;
 }
