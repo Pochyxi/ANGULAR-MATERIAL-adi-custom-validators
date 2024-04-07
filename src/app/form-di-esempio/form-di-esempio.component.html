@@ -1,0 +1,24 @@
+<form [formGroup]="login">
+  <div [ngStyle]="{
+  textAlign: 'center'
+  }">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName="email">
+
+      <app-messaggio-validazione [controllo]="login.get('email')" [nomeControllo]="'email'"></app-messaggio-validazione>
+    </mat-form-field>
+  </div>
+
+  <div [ngStyle]="{
+  marginTop: 16 +'px',
+  textAlign: 'center'
+  }">
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" type="password" formControlName="password">
+
+      <app-messaggio-validazione [controllo]="login.get('password')" [nomeControllo]="'password'"></app-messaggio-validazione>
+    </mat-form-field>
+  </div>
+</form>
