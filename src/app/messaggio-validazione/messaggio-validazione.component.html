@@ -1,8 +1,11 @@
+<!--adi--Questo messaggio verrà mostrato solo se il form è validato tramite il gestoreFormService-->
 <ng-container *ngIf="dovreiMostrare()">
-  <mat-error
-    [ngStyle]="{fontSize: 0.8 + 'rem'}"
+
+  <!--adi--Ciclo la lista degli errori e mostro i messaggi presenti-->
+  <span
+    [ngStyle]="{fontSize: 0.8 + 'rem', display: 'inline-block'}"
     *ngFor="let errori of listaDiErrori()"
   >
     {{errori}}
-  </mat-error>
+  </span>
 </ng-container>

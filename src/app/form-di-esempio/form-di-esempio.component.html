@@ -9,8 +9,9 @@
         placeholder="Email"
         formControlName="email"
       >
-
-      <app-messaggio-validazione [controllo]="login.get('email')" [nomeControllo]="'email'"></app-messaggio-validazione>
+      <mat-error>
+        <app-messaggio-validazione [controllo]="login.get('email')" [nomeControllo]="'email'"></app-messaggio-validazione>
+      </mat-error>
     </mat-form-field>
   </div>
 
@@ -22,7 +23,9 @@
       <mat-label>Password</mat-label>
       <input matInput placeholder="Password" type="password" formControlName="password">
 
-      <app-messaggio-validazione [controllo]="login.get('password')" [nomeControllo]="'password'"></app-messaggio-validazione>
+      <mat-error>
+        <app-messaggio-validazione [controllo]="login.get('password')" [nomeControllo]="'password'"></app-messaggio-validazione>
+      </mat-error>
     </mat-form-field>
   </div>
 </form>
